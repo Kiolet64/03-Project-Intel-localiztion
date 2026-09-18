@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,10 +29,10 @@
   </header>
 
   <!-- Timeline Cards Section -->
-  <section>
+  <section class="container row g-4 timeline-row">
 
     <!-- Card 1: 1968 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>1968</h2>
       <h3>Intel Founded</h3>
       <img src="img/1968.jpg" alt="Intel Founded" />
@@ -43,7 +44,7 @@
     </div> 
 
     <!-- Card 2: 1971 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
       <img src="img/FirstMicro.jpg" alt="First Microprocessor" />
@@ -55,7 +56,7 @@
     </div>
 
     <!-- Card 3: 1978 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>1978</h2>
       <h3>8086 Processor</h3>
       <img src="img/8086Processor.jpg" alt="8086 Processor" />
@@ -66,7 +67,7 @@
     </div>
 
     <!-- Card 4: 1985 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>1985</h2>
       <h3>386 Processor</h3>
       <img src="img/386Processor.jpg" alt="386 Processor" />
@@ -78,7 +79,7 @@
     </div>
 
     <!-- Card 5: 2006 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
       <img src="img/GhG Emissions.jpg" alt="Peak GHG Emissions" />
@@ -92,7 +93,7 @@
     </div>
 
     <!-- Card 6: 2020 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
       <img src="img/Strategy.jpg" alt="RISE Strategy" />
@@ -105,7 +106,7 @@
     </div>
 
     <!-- Card 7: 2022 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
       <img src="img/Greenhouse.jpg" alt="Net-Zero By 2040" />
@@ -118,7 +119,7 @@
     </div>
 
     <!-- Card 8: 2023 -->
-    <div tabindex="0">
+    <div class="col-12 col-md-6 col-xl-3" tabindex="0">
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
       <img src="img/Electricity.jpg" alt="Renewable Electricity" />
@@ -131,7 +132,7 @@
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <div class="col-12 col-md-6 col-xl-3">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
       <img src="img/Summet.jpg" alt="Sustainability Summit" />
@@ -143,6 +144,101 @@
       </p>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- Sustainability focus areas -->
+  <section class="container sustainability-section" aria-labelledby="sustainability-title">
+    <h2 id="sustainability-title">Sustainability Focus Areas</h2>
+    <div class="row g-4">
+      <article class="col-12 col-md-4 sustainability-card">
+        <h3>RISE Strategy</h3>
+        <p>
+          Intel's RISE strategy guides progress toward a more responsible,
+          inclusive, sustainable, and enabling future.
+        </p>
+      </article>
+
+      <article class="col-12 col-md-4 sustainability-card">
+        <h3>Net-Zero Emissions</h3>
+        <p>
+          Intel is working toward net-zero greenhouse gas emissions across
+          its global operations by 2040.
+        </p>
+      </article>
+
+      <article class="col-12 col-md-4 sustainability-card">
+        <h3>Water &amp; Waste</h3>
+        <p>
+          Intel conserves <strong>billions of gallons of water</strong> annually
+          and collaborates with local communities to restore watersheds.
+          Intel also recycles materials to reduce waste and support a
+          circular economy.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Newsletter subscription form -->
+  <section class="container newsletter-section" aria-labelledby="newsletter-title">
+    <h2 id="newsletter-title">Sbscribe to Our sustainablity</h2>
+    <form class="row g-2 justify-content-center" id="newsletter-form">
+      <div class="col-12 col-md-8">
+        <label class="visually-hidden" for="newsletter-email">Email</label>
+        <input class="form-control" type="email" id="newsletter-email" placeholder="Email" required />
+      </div>
+      <div class="col-12 col-md-auto">
+        <button class="btn btn-primary w-100" type="submit">Subscribe</button>
+      </div>
+      <p id="newsletter-message" class="col-12" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <script>
+    // Languages that are normally written from right to left.
+    const rtlLanguages = new Set([
+      'ar', 'arc', 'ckb', 'dv', 'fa', 'he', 'ku', 'ps', 'sd', 'syr', 'ur', 'yi'
+    ]);
+
+    function getLanguageCode(language) {
+      return language.toLowerCase().split(/[-_]/)[0];
+    }
+
+    function updateTextDirection() {
+      const googleTranslateSelect = document.querySelector('.goog-te-combo');
+      const translatedDirection = document.body.classList.contains('translated-rtl');
+      const explicitLeftToRight = document.body.classList.contains('translated-ltr');
+      const language = googleTranslateSelect?.value || document.documentElement.lang || 'en';
+      const isRtl = translatedDirection || (!explicitLeftToRight && rtlLanguages.has(getLanguageCode(language)));
+
+      document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
+    }
+
+    const directionObserver = new MutationObserver(updateTextDirection);
+    directionObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang', 'dir'] });
+    directionObserver.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    document.addEventListener('change', (event) => {
+      if (event.target.matches('.goog-te-combo')) {
+        updateTextDirection();
+      }
+    });
+
+    // Keep the demo form on this page instead of refreshing the browser.
+    document.querySelector('#newsletter-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const emailInput = document.querySelector('#newsletter-email');
+      const message = document.querySelector('#newsletter-message');
+
+      if (!emailInput.checkValidity()) {
+        emailInput.reportValidity();
+        return;
+      }
+
+      message.textContent = `Thanks! We'll send updates to ${emailInput.value}.`;
+      event.target.reset();
+    });
+
+    updateTextDirection();
+  </script>
 </body>
 </html>
