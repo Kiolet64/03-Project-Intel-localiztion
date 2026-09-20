@@ -52,7 +52,7 @@ header p {
 }
 
 /* Keep each card image inside the card and preserve its proportions. */
-section img {
+section.timeline img {
   width: 100%;
   max-width: 100%;
   height: 200px;
@@ -61,7 +61,7 @@ section img {
 }
 
 /* Limit the main content width and center it on wide screens. */
-section {
+section.timeline {
   width: 100%;
   max-width: 1100px;
   margin: 65px auto 24px;
@@ -72,7 +72,7 @@ section {
 }
 
 /* Show four cards at a time and keep the remaining cards horizontally scrollable. */
-section > div {
+section.timeline > div {
   flex: 0 0 calc((100% - 72px) / 4);
   min-width: 0;
   overflow-wrap: break-word;
@@ -85,7 +85,7 @@ section > div {
 }
 
 /* Hide each card's description until the card is hovered. */
-section > div p {
+section.timeline > div p {
   position: absolute;
   inset: 0;
   display: flex;
@@ -98,17 +98,17 @@ section > div p {
 }
 
 /* Show the description as an overlay when the card is hovered or focused. */
-section > div:is(:hover, :focus) p {
+section.timeline > div:is(:hover, :focus) p {
   opacity: 1;
 }
 
 /* Slightly enlarge the card when it is hovered or focused. */
-section > div:is(:hover, :focus) {
+section.timeline > div:is(:hover, :focus) {
   transform: scale(1.05);
 }
 
 /* Make keyboard focus visible on each card. */
-section > div:focus {
+section.timeline > div:focus {
   outline: 3px solid #333;
   outline-offset: 3px;
 }
@@ -121,6 +121,37 @@ section + p {
   text-align: center;
 }
 
+.sustainability-highlights {
+  width: 100%;
+  max-width: 1100px;
+  margin: 48px auto 24px;
+  padding: 0 16px;
+}
+
+.sustainability-highlights h2 {
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.highlight-card {
+  height: 100%;
+  padding: 24px;
+  background-color: #ffffff;
+  border-top: 5px solid #0071c5;
+  border-radius: 8px;
+}
+
+.highlight-card h3 {
+  margin-bottom: 12px;
+  color: #0071c5;
+}
+
+.highlight-card p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
 h1:hover {
   transition: font-size 0.5s;
   font-size: 50px;
@@ -129,12 +160,12 @@ h1:hover {
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
   /* Stack the cards vertically and make them fill the small screen. */
-  section {
+  section.timeline {
     flex-direction: column;
     overflow-x: hidden;
   }
 
-  section > div {
+  section.timeline > div {
     flex: 0 0 auto;
     width: 100%;
   }
@@ -152,6 +183,10 @@ h1:hover {
     width: 100%;
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  .sustainability-highlights {
+    margin-top: 36px;
   }
 }
 
