@@ -34,7 +34,7 @@ header h1 {
 }
 
 header p {
-  color: #d7f4ff;
+  color: #ffffff;
   width: 80%;
   max-width: 700px;
   margin: 0 auto;
@@ -121,30 +121,17 @@ section + p {
   text-align: center;
 }
 
-.sustainability-highlights {
-  width: 100%;
-  max-width: 1100px;
-  margin: 48px auto 24px;
-  padding: 0 16px;
-}
-
-.sustainability-highlights h2 {
-  margin-bottom: 24px;
-  color: #ffffff;
-  text-align: center;
-}
-
 .highlight-card {
   height: 100%;
   padding: 24px;
   background-color: #ffffff;
-  border-top: 5px solid #0071c5;
+  border-top: 5px solid rgb(46, 181, 226);
   border-radius: 8px;
 }
 
-.highlight-card h3 {
+.highlight-card h2 {
   margin-bottom: 12px;
-  color: #0071c5;
+  color: rgb(46, 181, 226);
 }
 
 .highlight-card p {
@@ -155,6 +142,11 @@ section + p {
 h1:hover {
   transition: font-size 0.5s;
   font-size: 50px;
+}
+
+.btn-primary {
+  background-color: rgb(46, 181, 226);
+  border-color: rgb(46, 181, 226);
 }
 
 /* Responsive design for smaller screens */

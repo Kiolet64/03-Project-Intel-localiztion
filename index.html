@@ -132,7 +132,7 @@
     </div>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <div tabindex="0">
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
       <img src="img/Summet.jpg" alt="Sustainability Summit" />
@@ -145,14 +145,12 @@
     </div>
   </section>
 
-  <!-- Sustainability Highlights Section -->
-  <section class="sustainability-highlights" aria-labelledby="highlights-heading">
+  <section class="sustainability-highlights">
     <div class="container">
-      <h2 id="highlights-heading">Intel Sustainability Priorities</h2>
       <div class="row g-4">
         <div class="col-12 col-md-4">
           <article class="highlight-card">
-            <h3>RISE Strategy</h3>
+            <h2>RISE Strategy</h2>
             <p>
               Intel's RISE strategy sets goals for responsible, inclusive,
               sustainable, and enabling progress across the company.
@@ -162,7 +160,7 @@
 
         <div class="col-12 col-md-4">
           <article class="highlight-card">
-            <h3>Net-Zero Emissions</h3>
+            <h2>Net-Zero Emissions</h2>
             <p>
               Intel is working toward net-zero greenhouse gas emissions from
               Scope 1 and 2 operations by 2040.
@@ -172,7 +170,7 @@
 
         <div class="col-12 col-md-4">
           <article class="highlight-card">
-            <h3>Water &amp; Waste</h3>
+            <h2>Water &amp; Waste</h2>
             <p>
               Intel conserves <strong>billions of gallons of water</strong>
               annually and collaborates with local communities to restore
@@ -184,7 +182,23 @@
       </div>
     </div>
   </section>
-  <p>Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <section class="container my-5" aria-labelledby="subscription-heading">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="bg-white p-4 rounded">
+          <h2 id="subscription-heading" class="mb-3">Subscribe to Our Sustainability Newsletter</h2>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Enter your email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>
