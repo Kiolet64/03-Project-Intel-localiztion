@@ -188,12 +188,24 @@
       <div class="col-12 col-md-8 col-lg-6">
         <div class="bg-white p-4 rounded">
           <h2 id="subscription-heading" class="mb-3">Subscribe to Our Sustainability Newsletter</h2>
-          <form>
+          <form id="newsletter-form" aria-describedby="email-help">
             <div class="mb-3">
-              <label for="email" class="form-label">Enter your email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                autocomplete="email"
+                inputmode="email"
+                required
+                aria-required="true"
+                aria-describedby="email-help"
+              >
+              <div id="email-help" class="form-text">We’ll send occasional sustainability updates and event news.</div>
             </div>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
+            <button type="submit" class="btn btn-primary" aria-label="Subscribe to the sustainability newsletter">Subscribe</button>
           </form>
         </div>
       </div>
