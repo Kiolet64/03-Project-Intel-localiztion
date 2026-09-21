@@ -149,6 +149,33 @@ h1:hover {
   border-color: rgb(46, 181, 226);
 }
 
+.site-footer {
+  margin-top: 48px;
+  background-color: #302f2f;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: rgb(46, 181, 226);
+  text-decoration: underline;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 600px) {
   /* Stack the cards vertically and make them fill the small screen. */
@@ -179,6 +206,11 @@ h1:hover {
 
   .sustainability-highlights {
     margin-top: 36px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
   }
 }
 
